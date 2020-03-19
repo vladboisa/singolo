@@ -10,36 +10,57 @@
 </head>
 
 <body>
-    <div class="wrop">
-        <header>
+    <div class="wrop" id="wrapper">
+        <header id="header" class="header">
             <div class="header-nav">
-                <h1 class="logo">Singolo<span class="logo_star">*</span></h1>
+                <h1 class="logo">
+                    Singolo<span class="logo_star">*</span></h1>
                 <nav>
-                    <ul>
-                        <li> <a class="nav_link activated" href="#">Home</a></li>
-                        <li><a class="nav_link" href="#">services</a> </li>
-                        <li><a class="nav_link" href="#">portfolio</a> </li>
-                        <li><a class="nav_link" href="#">about</a></li>
-                        <li> <a class="nav_link" href="#">contact</a></li>
+                    <ul id="menu">
+                        <li> <a class="nav_link" href="#Homemain">Home</a></li>
+                        <li><a class="nav_link" href="#servicesmain">services</a> </li>
+                        <li><a class="nav_link" href="#portfoliomain">portfolio</a> </li>
+                        <li><a class="nav_link" href="#aboutmain">about</a></li>
+                        <li> <a class="nav_link" href="#contactmain">contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <div class="slider">
-            <div class="slider_content">
-                <img src="assets/images/Screen1.png" class="slider__img img-one">
-                <img src="assets/images/Screen2.png" class="slider__img img-two">
-                <img src="assets/images/Cam.png" class="slider__phone phone-one">
-                <img src="assets/images/Shadow.png" class="slider__shadow shadow-one">
-                <img src="assets/images/Cam.png" class="slider__phone phone-two">
-                <img src="assets/images/Shadow.png" class="slider__shadow shadow-two">
-                <img src="assets/images/left.png" class="slider__arrow arrow-left">
-                <img src="assets/images/right.png" class="slider__arrow arrow-right">
+        <div id="Homemain"></div>
+
+        <div class="slider_content">
+            <div id="slider" class="slider">
+                <div class="item">
+                    <img id="Screen1" src="assets/images/Screen1.png" class="slider__img img-one">
+                    <img src="assets/images/Screen_bl.png" class="slider__img img-bl-one" alt="">
+                    <img src="assets/images/Screen2.png" class="slider__img img-two">
+                    <img src="assets/images/Screen_bl.png" class="slider__img img-bl-two" alt="">
+                    <img src="assets/images/Cam.png" class="slider__phone phone-one" onclick="off_screen()" alt="Phone1">
+                    <img src="assets/images/Shadow.png" class="slider__shadow shadow-one">
+                    <img src="assets/images/Cam.png" class="slider__phone phone-two" onclick="off_screen()" alt="Phone2">
+                    <img src="assets/images/Shadow.png" class="slider__shadow shadow-two">
+                    <img src="assets/images/left.png" class="slider__arrow arrow-left" onclick="minusSlide()" alt="Arrowl">
+                    <img src="assets/images/right.png" class="slider__arrow arrow-right" onclick="plusSlide()" alt="Arrowr">
+                </div>
+                <div class="item">
+                    <img src="assets/images/phone-vertical.png" class="slider__phone phone1" alt="Phone3">
+                    <img src="assets/images/phone-vertical-display.png" alt="" class="slider__img display1">
+                    <img src="assets/images/phone-vertical-shadow.png" alt="" class="slider__shadow shadow1">
+                    <img src="assets/images/phone-verticalbg.png" alt="" class="slider__phone2 phone2">
+                    <img src="assets/images/phone-vertical-displaybg.png" alt="" class="slider__img2 display2">
+                    <img src="assets/images/phone-vertical-shadowbg.png " alt=" " class="slider__shadow shadow2">
+                    <img src="assets/images/phone-verticalbg.png" alt="" class="slider__phone2 phone3">
+                    <img src="assets/images/phone-vertical-displaybg.png" alt="" class="slider__img2 display3">
+                    <img src="assets/images/phone-vertical-shadowbg.png " alt=" " class="slider__shadow shadow3">
+                    <img src="assets/images/left.png" class="slider__arrow arrow-left" onclick="minusSlide()" alt="Arrowl">
+                    <img src="assets/images/right.png" class="slider__arrow arrow-right" onclick="plusSlide()" alt="Arrowr">
+                </div>
             </div>
         </div>
-        <div class="services">
+        <div class="services" id="servicesmain">
             <div class="services-content">
-                <h2 class="services-title">Our Services</h2>
+                <h2 class="services-title">
+                    <a></a>Our Services</h2>
                 <p class="services-description">
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
                 </p>
@@ -119,29 +140,22 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio">
+        <div class="portfolio" id="portfoliomain">
             <div class="portfolio_content">
                 <div class="portfolio_description">
-                    <h1>Portfolio</h1>
+                    <h1>
+                        <a></a>Portfolio</h1>
                     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 </div>
                 <div class="portfolio_buttons">
-                    <ul>
-                        <div class="btn">
-                            <li><a class="nav_btn" href="#">All</a></li>
-                        </div>
-                        <div class="btn">
-                            <li><a class="nav_btn" href="#">web design</a> </li>
-                        </div>
-                        <div class="btn">
-                            <li><a class="nav_btn" href="#">graphic Design</a> </li>
-                        </div>
-                        <div class="btn">
-                            <li><a class="nav_btn" href="#">Artwork</a></li>
-                        </div>
+                    <ul id="tab">
+                        <li><a class="nav_btn" onclick="gallery_mix()">All</a></li>
+                        <li><a class="nav_btn" onclick="gallery_mix()">web design</a> </li>
+                        <li><a class="nav_btn" onclick="gallery_mix()">graphic Design</a> </li>
+                        <li><a class="nav_btn" onclick="gallery_mix()">Artwork</a></li>
                     </ul>
                 </div>
-                <div class="portfolio_images">
+                <div id="imges" class="portfolio_images">
                     <img class="portfolio_img" src="assets/images/portfolio/image1.png" alt="">
                     <img class="portfolio_img" src="assets/images/portfolio/image2.png" alt="">
                     <img class="portfolio_img" src="assets/images/portfolio/image3.png" alt="">
@@ -158,10 +172,11 @@
                 </div>
             </div>
         </div>
-        <div class="about-us">
+        <div class="about-us" id="aboutmain">
             <div class="about-us_content">
                 <div class="about-us_description">
-                    <h1>About us</h1>
+                    <h1>
+                        <a></a>About us</h1>
                     <p class="first">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor</p>
                     <p class="second">ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
                     </p>
@@ -203,25 +218,27 @@
                 </div>
             </div>
         </div>
-        <div class="quote">
+        <div class="quote" id="contactmain">
             <div class="quote_content">
                 <div class="quote_description">
-                    <h1>Get a Quote</h1>
+                    <h1>
+                        <a></a>Get a Quote</h1>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor</p>
                     <p>ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 </div>
                 <div class="quote_info">
                     <div class="quote_input">
-                        <form action="#" method="GET" class="contacts-form">
-                            <input class="contacts-form__input" type="text" name="name" placeholder="Name (Required)" pattern="([A-Za-z\sА-Яа-яЁё])+" required>
-                            <input class="contacts-form__input" type="email" name="email" placeholder="Email (Required)" pattern="([A-Za-z0-9._-])+@([A-Za-z0-9-_])+\.([a-z]){2,3}" required>
-                            <input class="contacts-form__input" type="text" name="subject" placeholder="Subject">
-                            <textarea class="contacts-form__textarea" name="message" placeholder="Describe your project in detail..."></textarea>
-                            <input class="contacts-form__input submit" type="submit" value="Submit">
+                        <form action="#" method="GET" class="contacts-form" id="contacts-form">
+                            <input id="contact_name" class="contacts-form__input" type="text" name="name" placeholder="Name (Required)" pattern="([A-Za-z\sА-Яа-яЁё])+" required>
+                            <input id="contact_email" class="contacts-form__input" type="email" name="email" placeholder="Email (Required)" pattern="([A-Za-z0-9._-])+@([A-Za-z0-9-_])+\.([a-z]){2,3}" required>
+                            <input id="contact_subject" class="contacts-form__input" type="text" name="subject" placeholder="Subject" maxlength="500">
+                            <textarea id="contact_textarea" class="contacts-form__textarea" name="message" placeholder="Describe your project in detail..." maxlength="925"></textarea>
+                            <input class="contacts-form__input submit open-modal" type="submit" value="Submit">
                         </form>
                     </div>
                     <div class="contact_info">
-                        <h2>Contact Information</h2>
+                        <h2>
+                            Contact Information</h2>
                         <p class="contact_info__description">Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
                         </p>
                         <p class="contacts-info__address">Elm St. 14/05 Lost City</p>
@@ -245,6 +262,16 @@
             </div>
         </footer>
     </div>
+    <div class="modal md-effect-1">
+        <div class="modal__content">
+            <p>Письмо отправлено</p>
+            <div class="modal-theme">Без темы</div>
+            <div class="modal-descr">Без описания</div>
+            <button class="modal__close">OK</button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
