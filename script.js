@@ -3,7 +3,6 @@ let firstScreen = document.querySelector(".img-one"),
     secondScreen = document.querySelector(".img-two"),
     thirdScreen = document.querySelector(".display1"),
     phone = document.querySelectorAll(".slider__phone");
-
 const MENU = document.getElementById('menu');
 const TAB = document.getElementById('tab');
 const portfolio_img = document.getElementById("imges");
@@ -18,7 +17,6 @@ const modalSub = document.getElementById('contact_subject');
 const modalTextarea = document.getElementById('contact_textarea');
 const modalTheme = document.querySelector('.modal-theme');
 const modalDescr = document.querySelector('.modal-descr');
-
 /* Scroll header */
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('li>a').forEach(el => el.classList.remove('activated'));
@@ -41,12 +39,6 @@ function onScroll(event) {
         }
     });
 }
-/* 
-
-
-
-
-
 /*For sticky menu height*/
 document.querySelectorAll('a[href^="#"').forEach(link => {
     link.addEventListener('click', function(e) {
@@ -196,5 +188,45 @@ closeModalButton.addEventListener('click', e => {
     body.classList.remove('body-lock')
     modalSub.value = '';
     modalTextarea.value = '';
+});
+/* Hambgurger */
 
-})
+const hambgurger = document.querySelector('.hamburger');
+const headernav = document.getElementById('nav');
+const logo = document.querySelector('.logo');
+const sect = document.querySelectorAll('#wrapper>div');
+const links = document.querySelectorAll('#menu>li>a');
+hambgurger.addEventListener('click', () => {
+    if (headernav.style.left === "-100%" || headernav.style.left === "") {
+        hambgurger.classList.add("hamb_opened");
+        headernav.style.left = "0%";
+        logo.style.paddingLeft = "50px";
+        logo.classList.add("logo_left");
+        body.style.overflow = "hidden";
+        headernav.classList.add("shadow");
+    } else {
+        hambgurger.classList.remove("hamb_opened");
+        headernav.style.left = "-100%";
+        logo.style.paddingLeft = "148px";
+        logo.classList.remove("logo_left");
+        body.style.overflow = "visible";
+        headernav.classList.remove("shadow");
+    }
+});
+MENU.addEventListener('click', close_burg);
+
+function close_burg(event) {
+    if (hambgurger.classList.contains('hamb_opened')) {
+        sect.forEach((el) => {
+            links.forEach((a) => {
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    hambgurger.classList.remove("hamb_opened");
+                    headernav.style.left = "-100%";
+                    logo.style.paddingLeft = "148px";
+                    body.style.overflow = "visible";
+                    headernav.classList.remove("shadow");
+                }
+            });
+        });
+    }
+};
